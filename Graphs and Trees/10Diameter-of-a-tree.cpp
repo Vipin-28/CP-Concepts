@@ -2,6 +2,9 @@
 using namespace std;
 const int N = 1e5+10;
 
+// koi bhi root ko leke max depth nikalate hai tho wo diameter ka ek end hota hai!!!!!!
+// ab diameter ka ek end pata hai tho st pt pata hai max diameter nikal jayega
+
 vector<int> g[N];
 int depth[N];
 void dfs(int vertex, int par=0){ 
@@ -33,7 +36,7 @@ int main(){
         }
         depth[i] = 0;
     }
-    dfs(mx_d_node);
+    dfs(mx_d_node); // upar se diameter ka ek end pata lag gya!!!
     mx_depth = -1;
     for(int i = 1;i<=n;i++){
         if(mx_depth < depth[i]){
